@@ -3,23 +3,13 @@
     margin: 0;
     padding: 0;
 }
-h1
-{
+h1 {
     font-family: 'Bauhaus 93';
     font-size: 2.5em;
     width: fit-content;
     letter-spacing: .075em;
-    margin: 50px 0 0 0;
-
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-
-    text-shadow:
-        0.1em .1em 0 rgb(115 106 153),
-        -0.1em -.1em 0 rgb(255 227 186);
 }
+
 h2
 {
     font-family: Industry;
@@ -84,14 +74,57 @@ h2
     width: fit-content;
     height: fit-content;
 }
-    .hamburger:hover #slice {
-        background-color: rgb(255 227 186);
-        transition: background-color .5s ease;
-    }
+.hamburger:hover #slice {
+    background-color: rgb(255 227 186);
+    transition: background-color .5s ease;
+}
 #slice
 {
     width: 30px;
     height: 4px;
     border-radius: 1.5px;
     background-color: #fff;
+}
+
+.underscore
+{
+    position: relative;
+    left: 0;
+}
+
+.glitch {
+    margin: 50px 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-shadow: 0.1em .1em 0 rgb(115 106 153), -0.1em -.1em 0 rgb(255 227 186);
+}
+@keyframes glitch {
+    0% {
+        text-shadow: 0.1em .1em 0 rgb(115 106 153),
+            -0.1em -.1em 0 rgb(255 227 186);
+    }
+    14% {
+        text-shadow: 0.1em .1em 0 rgb(115 106 153), -0.1em -.1em 0 rgb(255 227 186);
+    }
+    15% {
+        text-shadow: 0.1em -.1em 0 rgb(115 106 153),
+            0.1em -.1em 0 rgb(255 227 186);
+    }
+    49% {
+        text-shadow: 0.1em -.1em 0 rgb(115 106 153), 0.1em -.1em 0 rgb(255 227 186);
+    }
+    50% {
+        text-shadow: -0.1em .1em 0 rgb(115 106 153),
+            0.1em -.1em 0 rgb(255 227 186);
+    }
+    99% {
+        text-shadow: -0.1em .1em 0 rgb(115 106 153), 0.1em -.1em 0 rgb(255 227 186);
+    }
+    100% {
+        text-shadow: -0.1em -.1em 0 rgb(115 106 153),
+            0.1em .1em 0 rgb(255 227 186);
+    }
 }
